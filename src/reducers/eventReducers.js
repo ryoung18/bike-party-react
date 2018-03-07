@@ -6,7 +6,7 @@ const DEFAULT_STATE = {
     time: '',
     start_location: '',
     end_location: '',
-    attendees: []
+    users: []
 }
 
 export default function eventReducers(state = DEFAULT_STATE, action) {
