@@ -9,7 +9,11 @@ class Home extends Component {
   }
 
   render() {
+<<<<<<< HEAD
     let {date, time, start_location, end_location, users : attendees, isLoggedIn } = this.props.events;
+=======
+    let {date, time, start_location, end_location, users : attendees, isLoggedIn } = this.props;
+>>>>>>> 1f33e0337fb05f0d5e62a53fce639b3ca6ead6ba
 
     attendees = attendees.map(attendee => <li key={attendee.id}> {attendee.username} </li>)
 
@@ -33,11 +37,9 @@ class Home extends Component {
   }
 }
 
-
 function mapStateToProps(reduxState) {
   return { ...reduxState }
 }
-
 
 export default connect(mapStateToProps, { getMeetupInfo })(Home)
 

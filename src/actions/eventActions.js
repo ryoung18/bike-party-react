@@ -1,6 +1,14 @@
 // import axios from "axios";
-
+import { API_URL } from "../utils/helpers"; // server address localhost:3001
 export const GET_MEETUP_INFO = 'GET_MEETUP_INFO';
+
+function handleMeetupInfo(data) {
+  return {
+    type: GET_MEETUP_INFO,
+    data
+  }
+}
+
 
 export function getMeetupInfo() {
   return dispatch => {
@@ -8,6 +16,12 @@ export function getMeetupInfo() {
       type: GET_MEETUP_INFO,
       data
     })
+
+    //cant tell if this works
+    // return fetch(`${API_URL}/api/event/`)
+    //   .then(res => res.json())
+    //   .then(data => dispatch(handleMeetupInfo(data)))
+    //   .catch(err => console.log('issue', err))
   }
 }
 
