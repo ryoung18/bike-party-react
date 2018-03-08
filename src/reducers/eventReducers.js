@@ -6,10 +6,10 @@ const DEFAULT_STATE = {
     time: '',
     start_location: '',
     end_location: '',
-    attendees: []
+    users: []
 }
 
-export default function eventReducers(state = DEFAULT_STATE, action) {
+export default function (state = DEFAULT_STATE, action) {
   switch(action.type) {
     case GET_MEETUP_INFO:
       return {...state, ...action.data};

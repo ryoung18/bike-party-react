@@ -1,19 +1,19 @@
-// import { SET_CURRENT_USER } from '../actions/userActions';
-//
-// const DEFAULT_STATE = {
-//   isAuthenticated: false,
-//   user: {}
-// };
-//
-// export default function userReducers(state = DEFAULT_STATE, action) {
-//   switch(action.type) {
-//     case SET_CURRENT_USER:
-//
-//       return {
-//         isAuthenticated: !!(Object.keys(action.user).length),
-//         user: action.user
-//       };
-//     default:
-//       return state;
-//   }
-// }
+import { GET_USER_INFO } from '../actions/userActions';
+
+const DEFAULT_STATE = {
+  username: '',
+  firstName: '',
+  lastName: '',
+  email: '',
+  isAuthenticated: false,
+  user: {}
+};
+
+export default function (state = DEFAULT_STATE, action) {
+  switch(action.type) {
+    case GET_USER_INFO:
+      return {...state, ...action.data };
+    default:
+      return state;
+  }
+}

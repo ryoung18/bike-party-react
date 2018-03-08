@@ -9,7 +9,7 @@ class Home extends Component {
   }
 
   render() {
-    let {date, time, start_location, end_location, attendees, isLoggedIn } = this.props;
+    let {date, time, start_location, end_location, users : attendees, isLoggedIn } = this.props.events;
 
     attendees = attendees.map(attendee => <li key={attendee.id}> {attendee.username} </li>)
 
@@ -35,7 +35,7 @@ class Home extends Component {
 
 
 function mapStateToProps(reduxState) {
-  return { ...reduxState.eventReducers }
+  return { ...reduxState }
 }
 
 

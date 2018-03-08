@@ -17,5 +17,5 @@ let data = {
   time: '9:00 PM PST',
   start_location: '2191 Monterey Hwy San Jose, CA 95125',
   end_location: '2434 Almaden Rd San Jose, CA 95125',
-  attendees: [{id: 1, username: 'Bob'}, {id: 2, username: 'Joe'}, {id: 3, username: 'Amy'}]
+  users: [{id: 1, username: 'Bob'}, {id: 2, username: 'Joe'}, {id: 3, username: 'Amy'}]
 }
