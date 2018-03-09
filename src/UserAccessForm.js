@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { login } from './actions/userActions';
 
 class UserAccessForm extends Component {
   constructor(props) {
@@ -21,7 +23,15 @@ class UserAccessForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    e.target.reset();
+    if(this.state.isLogin) {
+      let data = {
+        email: this.state.email,
+        password: this.state.password
+      }
+      this.props.login(data)
+    }
+
+    // e.target.reset();
   }
 
   handleChange(e) {
@@ -60,7 +70,14 @@ class UserAccessForm extends Component {
   }
 }
 
-export default UserAccessForm;
+function mapStateToProps(action) {
+  return {
+    ...this.state
+  }
+}
+
+
+export default connect(mapStateToProps, { login })(UserAccessForm);
 
 UserAccessForm.defaultProps =  {
   inputFields:  [

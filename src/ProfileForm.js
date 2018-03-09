@@ -9,7 +9,7 @@ const ProfileInfo = ({username, firstName, lastName, email, handleSubmit, handle
       <input name='firstName' type="text" value={firstName} onChange={handleChange}/>
     </label>
     <label> Last name:
-      <input name='firstName' type="text" value={lastName} onChange={handleChange}/>
+      <input name='lastName' type="text" value={lastName} onChange={handleChange}/>
     </label>
     <label> E-mail:
       <input name='email' type="email" value={email} onChange={handleChange}/>

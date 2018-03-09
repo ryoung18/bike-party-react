@@ -9,7 +9,7 @@ const DEFAULT_STATE = {
     users: []
 }
 
-export default function (state = DEFAULT_STATE, action) {
+export default (state = DEFAULT_STATE, action) => {
   switch(action.type) {
     case GET_MEETUP_INFO:
       return {...state, ...action.data};
